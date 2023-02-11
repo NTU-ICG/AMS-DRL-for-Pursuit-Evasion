@@ -3,7 +3,7 @@ This is the repository for the paper "Multi-Pursuit Evasion for Safe Targeted Na
 
 ## Network
 <div style="text-align: center">
-<img src="assets/pipeline.png" style="width:80%; height:80%" >
+<img src="assets/NN.png" style="width:80%; height:80%" >
 </div>
 
 ## Demo
