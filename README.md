@@ -11,5 +11,5 @@ Safe navigation of drones in the presence of adversarial physical attacks from m
 
 ## Physical Experiment Demo
 <div style="text-align: center">
-<img src="assets/demo.gif" style="width:200%; height:200%"  >
+<img src="assets/drones-chasing-drones.gif" style="width:200%; height:200%"  >
 </div>
