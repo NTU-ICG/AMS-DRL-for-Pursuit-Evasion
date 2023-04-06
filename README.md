@@ -31,7 +31,9 @@ Safe navigation of drones in the presence of adversarial physical attacks from m
 ********************************************************
 ### Bugs:
 1. cannot install the onnx package
+
 sol:   export CMAKE_ARGS="-DONNX_USE_PROTOBUF_SHARED_LIBS=ON"
 
 2. cannot run the multiple_drone_laucher.py
+
 sol: make sure the tello driver is activated and all drones are in the same network.
