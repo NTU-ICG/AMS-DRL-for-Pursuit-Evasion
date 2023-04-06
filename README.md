@@ -15,4 +15,23 @@ Safe navigation of drones in the presence of adversarial physical attacks from m
 </div>
 
 ## Code and Procedure
-Coming soon.
+Requirements:
+Ubuntu 18.04
+ROS Melodic
+Python 2
+Tello driver from https://github.com/xjp99v5/tello-driver-ros 
+ONNX
+
+Steps:
+1. roslaunch vrpn_client_ros drone.launch
+2. python multiple_drone_laucher.py
+3. python swarm_test.py.
+4. python landTello.py
+
+********************************************************
+Bugs:
+1. cannot install the onnx package
+sol:   export CMAKE_ARGS="-DONNX_USE_PROTOBUF_SHARED_LIBS=ON"
+
+2. cannot run the multiple_drone_laucher.py
+sol: make sure the tello driver is activated and all drones are in the same network.
