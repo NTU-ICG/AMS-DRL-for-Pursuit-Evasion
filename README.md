@@ -23,10 +23,10 @@ The proposed AMS-DRL is designed to evolve adversarial agents in a pursuit-evasi
 
 ## Physical Experiment
 <div style="text-align: center">
-<img src="assets/drones-chasing-drones.gif" style="width:200%; height:200%"  >
+<img src="assets/drones-chasing-drones.gif" width="700"  >
 </div>
 <div style="text-align: center">
-<img src="assets/AMS-DRLS2.gif" style="width:200%; height:200%"  >
+<img src="assets/AMS-DRLS2.gif" width="700"  >
 </div>
 <p>
     <em>Evading multiple pursuers with learned policy. The runner (evader) is labeled as white, and the two chasers (pursuers) are labeled as blue. The target is a box with AprilTag.</em>
