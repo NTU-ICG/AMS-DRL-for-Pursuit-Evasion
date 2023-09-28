@@ -17,7 +17,7 @@ Safe navigation of drones in the presence of adversarial physical attacks from m
 The proposed AMS-DRL is designed to evolve adversarial agents in a pursuit-evasion game from multi-stage deep reinforcement learning, where the chaser drones (pursuers) and the runner drone (evader) are asynchronously trained in a bipartite graph way during different stages. With perfect information on position observation, the control policy for the runner drone is initially trained to reach the target box (the destination of the runner drone) in the cold-start learning stage ($S_0$). During the following stages, the chaser drones and the runner drone are trained against each other with one team fixed with a pre-trained policy from the prior stage, e.g., during Stage 1 ($S_1$), the chaser drones are trained to attack the runner drone while the runner drone is driven with the control policy from $S_0$. AMS-DRL can be seen as an unsupervised learning algorithm toward open-ended evolution, which approximates the capability limits of agents consistently only if the adversarial agents reach a Nash Equilibrium (NE).
 
 <div style="text-align: center">
-<img src="assets/NN.png" style="width:60%; height:60%" >
+<img src="assets/NN.png" width="700" >
 </div>
 
 
