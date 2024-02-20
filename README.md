@@ -1,17 +1,20 @@
 # AMS-DRL-for-Pursuit-Evasion
-This is the repository for the paper entitled "AMS-DRL: Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones".
+This is the repository for the paper entitled "Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones".
 If you are interested, we would appreciate giving us a star and using the following citation:
 ```
-@article{xiao2023ams,
-  title={AMS-DRL: Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones},
+@ARTICLE{xiao_ams,
   author={Xiao, Jiaping and Feroskhan, Mir},
-  journal={arXiv preprint arXiv:2304.03443},
-  year={2023}
-}
+  journal={IEEE Transactions on Artificial Intelligence}, 
+  title={Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-14},
+  doi={10.1109/TAI.2024.3366871}}
 ```
 
 ## Abstract
-Safe navigation of drones in the presence of adversarial physical attacks from multiple pursuers is a challenging task. This paper proposes a novel approach, asynchronous multi-stage deep reinforcement learning (AMS-DRL), to train an adversarial neural network that can learn from the actions of multiple pursuers and adapt quickly to their behavior, enabling the drone to avoid attacks and reach its target. Our approach guarantees convergence by ensuring Nash Equilibrium among agents from the game-theory analysis. We evaluate our method in extensive simulations and show that it outperforms baselines with higher navigation success rates. We also analyze how parameters such as the relative maximum speed affect navigation performance. Furthermore, we have conducted physical experiments and validated the effectiveness of the trained policies in real-time flights. A success rate heatmap is introduced to elucidate how spatial geometry influences navigation outcomes.
+Safe navigation of drones in the presence of adversarial physical attacks from multiple pursuers is a challenging task. This paper proposes a novel approach, asynchronous multistage deep reinforcement learning (AMS-DRL), to train adversarial neural networks that can learn from the actions of multiple evolved pursuers and adapt quickly to their behavior, enabling the drone to avoid attacks and reach its target. Specifically, AMS-DRL evolves adversarial agents in a pursuit-evasion game where the pursuers and the evader are asynchronously trained in a bipartite graph way during multiple stages. Our approach guarantees convergence by ensuring Nash equilibrium among agents from the game-theory analysis. We evaluate our method in extensive simulations and show that it outperforms baselines with higher navigation success rates. We also analyze how parameters such as the relative maximum speed affect navigation performance. Furthermore, we have conducted physical experiments and validated the effectiveness of the trained policies in real-time flights. A success rate heatmap is introduced to elucidate how spatial geometry influences navigation outcomes.
 
 ## Approach
 The proposed AMS-DRL is designed to evolve adversarial agents in a pursuit-evasion game from multi-stage deep reinforcement learning, where the chaser drones (pursuers) and the runner drone (evader) are asynchronously trained in a bipartite graph way during different stages. With perfect information on position observation, the control policy for the runner drone is initially trained to reach the target box (the destination of the runner drone) in the cold-start learning stage ($S_0$). During the following stages, the chaser drones and the runner drone are trained against each other with one team fixed with a pre-trained policy from the prior stage, e.g., during Stage 1 ($S_1$), the chaser drones are trained to attack the runner drone while the runner drone is driven with the control policy from $S_0$. AMS-DRL can be seen as an unsupervised learning algorithm toward open-ended evolution, which approximates the capability limits of agents consistently only if the adversarial agents reach a Nash Equilibrium (NE).
