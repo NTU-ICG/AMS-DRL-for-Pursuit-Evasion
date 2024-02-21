@@ -1,4 +1,4 @@
-# AMS-DRL-for-Pursuit-Evasion
+# Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones
 This is the repository for the paper entitled "Learning Multi-Pursuit Evasion for Safe Targeted Navigation of Drones".
 If you are interested, we would appreciate giving us a star and using the following citation:
 ```
